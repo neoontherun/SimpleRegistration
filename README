@@ -1,0 +1,37 @@
+## Running the Application ##
+
+To run the application as JAR:
+1 - In the application root directory run: "mvn clean install -U"
+2 - Run "java -jar target/coding-exercise-1.0-SNAPSHOT.jar"
+
+## Swagger Documentation ##
+Swagger documentation for the API is available at: http://localhost:8080/swagger-ui.html
+Just a plain default version without much customization.
+
+## Testing ##
+Unit/ Integration tests run by default during the regular maven build.
+
+
+## Test Coverage ##
+After running Unit and Integration tests a coverage report will be available under the directory  "/target/jacoco-ut/index.html"
+
+
+##Postman Request - defaulted to localhost##
+
+1. Register
+PUT http://localhost:8080/register HTTP/1.1
+Host: localhost
+Content-Type: application/json
+cache-control: no-cache
+Postman-Token: 70aa387c-8555-445a-a12f-68d75289e3cd
+{
+	"username": "Karthik",
+	"password":"abcD123",
+	"dob":"2000-10-10",
+	"ssn":"abcd12345"
+}
+
+
+2. Get All Users
+GET http://localhost:8080/users HTTP/1.1
+Host: localhost
